@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hello Kitty Clock</title>
+
+  <!-- Fonte pixel -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="clock-card" role="group" aria-label="Relógio digital Hello Kitty">
+      <div class="clock-top">
+        <div class="time" id="time">00:00:00</div>
+        <div class="ampm" id="ampm"></div>
+      </div>
+
+      <div class="controls">
+        <button id="toggleFormat" class="btn">24h</button>
+        <button id="toggleSeconds" class="btn">Seconds: on</button>
+      </div>
+
+      <div class="date" id="date">DD/MM/YYYY</div>
+
+      <img src="hello-kitty-coffee.gif" alt="Hello Kitty gif" class="kitty-gif" />
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

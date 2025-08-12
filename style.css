@@ -1,0 +1,79 @@
+:root{
+  --bg: linear-gradient(135deg,#ffe6f0 0%, #fff0f8 100%);
+  --card: rgba(255, 255, 255, 0.95);
+  --accent: #ff77b8;
+  --muted: #6d586c;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,"Press Start 2P",sans-serif;background:var(--bg);color:#222;}
+
+.wrap{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+/* card */
+.clock-card{
+  position:relative;
+  width:360px;
+  max-width:92vw;
+  padding:22px;
+  border-radius:18px;
+  background:var(--card);
+  box-shadow:0 14px 30px rgba(0,0,0,0.12);
+  text-align:center;
+  overflow:hidden;
+}
+
+/* time */
+.clock-top{display:flex;align-items:baseline;justify-content:center;gap:10px;}
+.time{
+  font-size:34px;
+  letter-spacing:2px;
+  color:var(--accent);
+  text-shadow:0 6px 14px rgba(255,120,180,0.12);
+}
+.ampm{font-size:12px;color:var(--muted);font-family:system-ui,Segoe UI,Roboto,sans-serif;}
+
+/* date */
+.date{
+  margin-top:12px;
+  font-size:11px;
+  color:var(--muted);
+  font-family:system-ui,Segoe UI,Roboto,sans-serif;
+}
+
+/* controls */
+.controls{display:flex;gap:8px;justify-content:center;margin-top:14px;}
+.btn{
+  background:transparent;
+  border:2px solid rgba(0,0,0,0.06);
+  padding:8px 10px;
+  border-radius:10px;
+  font-size:11px;
+  cursor:pointer;
+  transition:transform .12s ease, background .12s ease;
+}
+.btn:active{transform:translateY(2px)}
+.btn:hover{background:rgba(255,255,255,0.6)}
+
+/* Kitty gif (canto) */
+.kitty-gif{
+  position:absolute;
+  right:14px;
+  bottom:20px;
+  width:96px;
+  height:auto;
+  pointer-events:none;
+  user-select:none;
+}
+
+/* estilo responsivo: encolhe fonte em telas pequenas */
+@media (max-width:420px){
+  .time{font-size:26px}
+  .kitty-gif{width:72px}
+}
